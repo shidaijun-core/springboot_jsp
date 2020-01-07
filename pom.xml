@@ -72,13 +72,13 @@
         </dependency>
         <!-- MYSQL -->
 
-
-        <!-- 引入mysql数据库连接驱动-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- 引入mysql数据库连接驱动-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -127,40 +127,21 @@
             <version>2.3</version>
         </dependency>
     </dependencies>
-<!--
+
 
     <build>
-        &lt;!&ndash;这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。&ndash;&gt;
+        <!--这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。-->
         <resources>
             <resource>
-                &lt;!&ndash;   描述存放资源的目录，该路径相对POM路径&ndash;&gt;
+                <!--   描述存放资源的目录，该路径相对POM路径-->
                 <directory>src/main/java</directory>
                 <includes>
-                    <include>com.sdj.web.mapper.xml/*.xml</include>
+                    <include>**/*.xml</include>
                 </includes>
             </resource>
         </resources>
 
-
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
--->
-
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*Mapper.xml</include>
-                </includes>
-            </resource>
-        </resources>
-        <plugins>
+         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -171,6 +152,8 @@
                 <!--springboot 热加载 fork :  如果没有该项配置，肯定devtools不会起作用，即应用不会restart -->
             </plugin>
         </plugins>
-
     </build>
+
+
+
 </project>
