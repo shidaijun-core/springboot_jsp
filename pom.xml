@@ -118,7 +118,7 @@
         <dependency>
             <groupId>com.ibeetl</groupId>
             <artifactId>beetl</artifactId>
-            <version>3.0.15.RELEASE</version>
+            <version>3.15.13.RELEASE</version>
         </dependency>
         <!-- 添加 mybatis-plus DbType 数据库类型类 依赖 -->
         <dependency>
